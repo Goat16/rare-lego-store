@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rare and collectible LEGO pieces for sale in Canada." />
+  <title>Rare Brick Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Rare Brick Vault home">
+      <span class="brick-logo" aria-hidden="true"><span></span><span></span></span>
+      <span>Rare Brick Vault</span>
+    </a>
+    <nav>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#shipping">Shipping</a>
+      <button class="cart-button" id="cartButton" aria-label="Open cart">Cart <span id="cartCount">0</span></button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">COLLECTIBLE • RETIRED • HARD TO FIND</p>
+        <h1>Rare LEGO pieces, without the digging.</h1>
+        <p class="hero-text">A small curated shop for uncommon parts, minifigure accessories, printed elements, and retired pieces.</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#shop">Browse pieces</a>
+          <a class="secondary-button" href="#contact">Ask about a part</a>
+        </div>
+        <div class="trust-row">
+          <span>✓ Photos of actual items</span>
+          <span>✓ Condition clearly listed</span>
+          <span>✓ Toronto-based seller</span>
+        </div>
+      </div>
+      <div class="hero-card" aria-hidden="true">
+        <div class="lego-piece piece-one"></div>
+        <div class="lego-piece piece-two"></div>
+        <div class="lego-piece piece-three"></div>
+        <div class="hero-badge">Rare Finds</div>
+      </div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CURRENT INVENTORY</p>
+          <h2>Pieces for sale</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Product filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="part">Parts</button>
+          <button class="filter" data-filter="minifig">Minifig</button>
+          <button class="filter" data-filter="printed">Printed</button>
+        </div>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="info-grid" id="about">
+      <article>
+        <span class="info-number">01</span>
+        <h3>Actual item photos</h3>
+        <p>Each listing can use your own photos so buyers know exactly what they are getting.</p>
+      </article>
+      <article>
+        <span class="info-number">02</span>
+        <h3>Collector details</h3>
+        <p>We can list LEGO element IDs, BrickLink part numbers, colour, year, set origin, and condition.</p>
+      </article>
+      <article id="shipping">
+        <span class="info-number">03</span>
+        <h3>Simple shipping</h3>
+        <p>Start with Canada-wide shipping or local Toronto pickup, then add automatic checkout later if you want.</p>
+      </article>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div>
+        <p class="eyebrow">LOOKING FOR SOMETHING?</p>
+        <h2>Ask about a piece.</h2>
+        <p>Use this form for bundles, extra photos, or questions about condition. The starter version opens your email app.</p>
+      </div>
+      <form id="contactForm">
+        <label>Name<input id="name" required placeholder="Your name" /></label>
+        <label>Email<input id="email" type="email" required placeholder="you@example.com" /></label>
+        <label>Message<textarea id="message" required rows="5" placeholder="I'm interested in..."></textarea></label>
+        <button class="primary-button" type="submit">Send inquiry</button>
+      </form>
+    </section>
+  </main>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-header">
+      <h2>Your cart</h2>
+      <button id="closeCart" aria-label="Close cart">×</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Total</span><strong id="cartTotal">$0.00 CAD</strong></div>
+      <button class="primary-button checkout-button" id="checkoutButton">Request to buy</button>
+      <p class="small-note">Starter version: this creates a purchase inquiry. We can add Stripe/Shopify checkout next.</p>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <footer>
+    <span>© 2026 Rare Brick Vault</span>
+    <span>Independent LEGO reseller. LEGO® is a trademark of the LEGO Group, which does not sponsor or endorse this site.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
